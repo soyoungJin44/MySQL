@@ -125,12 +125,12 @@ order by hire_date asc;
 */
 
 select	concat(date_format(min(hire_date) , '%Y년 %m월 %d일'),
-		case when (date_format(min(hire_date) , '%a')) = 'sun' then '일요일'
-			 when (date_format(min(hire_date) , '%a')) = 'mon' then '월요일'
-			 when (date_format(min(hire_date) , '%a')) = 'tue' then '화요일'
-			 when (date_format(min(hire_date) , '%a')) = 'wed' then '수요일'
-			 when (date_format(min(hire_date) , '%a')) = 'thu' then '목요일'
-			 when (date_format(min(hire_date) , '%a')) = 'fri' then '금요일'
-			 when (date_format(min(hire_date) , '%a')) = 'sat' then '토요일'
+		case when (date_format(min(hire_date) , '%a')) = 'sun' then '(일요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'mon' then '(월요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'tue' then '(화요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'wed' then '(수요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'thu' then '(목요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'fri' then '(금요일)'
+			 when (date_format(min(hire_date) , '%a')) = 'sat' then '(토요일)'
 end) as '날짜'
 from employees;
